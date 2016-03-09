@@ -1,0 +1,7 @@
+.RemoteSystemsTempFiles
+*.exe
+*.out
+*.
+*.o
+*.s 
+*.mk 

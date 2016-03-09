@@ -1,0 +1,15 @@
+15:03:08 **** Build of configuration Debug for project Tests ****
+make all 
+Building file: ../src/SpeicherMagie.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++14 -MMD -MP -MF"src/SpeicherMagie.d" -MT"src/SpeicherMagie.o" -o "src/SpeicherMagie.o" "../src/SpeicherMagie.cpp"
+Finished building: ../src/SpeicherMagie.cpp
+ 
+Building target: Tests
+Invoking: GCC C++ Linker
+g++  -o "Tests"  ./src/SpeicherMagie.o   
+Finished building target: Tests
+ 
+15:03:12 **** Incremental Build of configuration Debug for project Tests ****
+make all 
+make: Nothing to be done for 'all'.
