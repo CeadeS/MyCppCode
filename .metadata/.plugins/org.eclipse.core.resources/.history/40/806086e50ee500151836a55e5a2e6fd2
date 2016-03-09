@@ -1,0 +1,23 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Mar 8, 2016
+ *      Author: maho9219
+ */
+#include<stdio.h>
+#include<iostream>
+#include <vector>
+#include <initializer_list>
+#include"main.h"
+struct Base1{
+	Base1(int i){}
+};
+struct Base2{
+	Base2(int i){}
+};
+
+int main(int argc, char** argv){
+	return -1;
+}
+
+

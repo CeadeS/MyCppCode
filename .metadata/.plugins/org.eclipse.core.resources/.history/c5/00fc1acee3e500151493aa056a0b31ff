@@ -1,0 +1,36 @@
+/*
+ * SpeicherMagie.cpp
+ *
+ *  Created on: Mar 8, 2016
+ *      Author: maho9219
+ */
+#include "Tests.hpp"
+#include <memory>
+#include <stdio.h>
+int main(int argc, char **argv) {
+	std::shared_ptr<Tests> foo = std::make_shared< Tests >(5,5);
+	//foo.reset();
+	foo-> setCharAt(2,'Z');
+	char* c= foo->getCharRefAt(3);
+	*c ='@';
+	printf("Array der Länge %d \n Array an Stelle 2 %c \n an Stelle 3 %c \n",foo->getA(),foo->getCharAt(2),foo->getCharAt(3));
+	printf ("in c steht? %c \n",*c);
+	foo.reset();
+	printf ("Nach dem reset: %c",*c);
+	printf ("Tests direkt new \n");
+	Tests bar = new Tests(5,5);
+	char* c= bar->getCharRefAt(3);
+	*c ='@';
+	printf("Array der Länge %d \n Array an Stelle 2 %c \n an Stelle 3 %c \n",foo->getA(),foo->getCharAt(2),foo->getCharAt(3));
+	printf ("in c steht? %c \n",*c);
+	delete(bar);
+	printf ("Nach dem reset: %c",*c);
+
+
+
+	return -1;
+}
+
+
+
+

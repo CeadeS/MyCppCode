@@ -1,0 +1,31 @@
+/*
+ * SpeicherMagie.cpp
+ *
+ *  Created on: Mar 8, 2016
+ *      Author: maho9219
+ */
+#include "Tests.hpp"
+#include <memory>
+#include <stdio.h>
+int main(int argc, char **argv) {
+	std::shared_ptr<Tests> foo = std::make_shared< Tests >();
+	//foo.reset();
+	printf("%d",foo->getA());
+	foo.reset();
+
+	auto b = &"test";
+	auto c = std::move(b);
+	printf("%s \n",*b);
+	//auto c = *b;
+	printf("%s \n");
+	//*b = "ops";
+	//printf("%s",*b);
+	//t.getA();
+
+
+	return -1;
+}
+
+
+
+

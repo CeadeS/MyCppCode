@@ -1,0 +1,41 @@
+/*
+ * Tests.hpp
+ *
+ *  Created on: Mar 8, 2016
+ *      Author: maho9219
+ */
+
+#ifndef TESTS_HPP_
+#define TESTS_HPP_
+#include<memory>
+
+class Tests : public std::enable_shared_from_this<Tests>
+{
+	int a=5,b;
+	char* ca;
+	public:
+	 std::shared_ptr<Tests> getptr() {
+	         return shared_from_this();
+	     }
+	 int getA(){return a;};
+	 char giveCharAt(int i)
+	 {
+		if (i<b) return ca[i];
+		return '-1';
+	 }
+
+	 Tests(int _a,_b):
+		 a=_a,
+		 b=_b,
+		 ca = new char[b];
+		 {
+	 }
+	 ~Tests(){
+	 }
+
+};
+
+
+
+
+#endif /* TESTS_HPP_ */

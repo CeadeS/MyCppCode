@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.exe.debug.1000126590/BOOST/delimiter=\:
+environment/project/cdt.managedbuild.config.gnu.exe.debug.1000126590/BOOST/operation=replace
+environment/project/cdt.managedbuild.config.gnu.exe.debug.1000126590/BOOST/value=/usr/local/share/boost/include/boost
+environment/project/cdt.managedbuild.config.gnu.exe.debug.1000126590/append=true
+environment/project/cdt.managedbuild.config.gnu.exe.debug.1000126590/appendContributed=true
+environment/project/cdt.managedbuild.config.gnu.exe.release.1944829781/BOOST/delimiter=\:
+environment/project/cdt.managedbuild.config.gnu.exe.release.1944829781/BOOST/operation=append
+environment/project/cdt.managedbuild.config.gnu.exe.release.1944829781/BOOST/value=/usr/local/share/boost/
+environment/project/cdt.managedbuild.config.gnu.exe.release.1944829781/append=true
+environment/project/cdt.managedbuild.config.gnu.exe.release.1944829781/appendContributed=true

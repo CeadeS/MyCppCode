@@ -1,0 +1,28 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Mar 8, 2016
+ *      Author: maho9219
+ */
+#include<stdio.h>
+#include<iostream>
+#include <vector>
+#include <initializer_list>
+#include<string>
+#include"main.h"
+struct Base1{
+	explicit Base1(int i){};
+};
+struct Derived
+	:public Base1struct Base1{
+	Base1(int i){};
+};{
+	using Base1::Base1;
+	Derived(int i) : Base1(i){};
+};
+
+int main(int argc, char** argv){
+	return -1;
+}
+
+

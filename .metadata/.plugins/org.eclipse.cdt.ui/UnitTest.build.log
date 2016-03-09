@@ -1,0 +1,6 @@
+15:46:19 **** Incremental Build of configuration Debug for project UnitTest ****
+make all 
+make: *** No rule to make target 'fak-test.o', needed by 'UnitTest'.  Stop.
+
+15:46:19 Build Finished (took 335ms)
+

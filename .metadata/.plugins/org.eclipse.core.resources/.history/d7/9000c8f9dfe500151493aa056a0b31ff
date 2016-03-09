@@ -1,0 +1,24 @@
+/*
+ * SpeicherMagie.cpp
+ *
+ *  Created on: Mar 8, 2016
+ *      Author: maho9219
+ */
+#include "Tests.hpp"
+#include <memory>
+#include <stdio.h>
+int main(int argc, char **argv) {
+	std::shared_ptr<Tests> foo = std::make_shared< Tests >(5,5);
+	//foo.reset();
+	foo-> setCharAt(2,'Z');
+	printf("%d, %c",foo->getA(),foo->getCharAt(2));
+	foo.reset();
+
+
+
+	return -1;
+}
+
+
+
+

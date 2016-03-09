@@ -1,0 +1,15 @@
+/*
+ * main.cpp
+ *
+ *  Created on: Mar 8, 2016
+ *      Author: maho9219
+ */
+#include "adressbuch.hpp"
+
+int main(int argc, char **argv){
+	AdressBuch book;
+	book.insert("foo");
+	book.insert("bar");
+	book.insert("baz");
+	book.insert("foo bar");
+}
