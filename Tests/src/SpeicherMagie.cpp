@@ -8,6 +8,7 @@
 #include <memory>
 #include <stdio.h>
 #include  <utility>
+
 int main(int argc, char **argv) {
 	std::shared_ptr<Tests> foo = std::make_shared< Tests >(5,5);
 	//foo.reset();
@@ -34,7 +35,10 @@ int main(int argc, char **argv) {
 	delete bar;
 	printf("Das steht in Tangel Auswirkung, wenn bar gelöscht wird: %d \n",tangel->getA());
 	printf ("Nach dem reset: %c",*c);
-	printf ("\n %d",baz(&i));
+	printf ("\n %d\n",baz(&i));
+    classparam p;
+    std::unique_ptr<Tests> neu = Testsfactory::makeunique_Tests(p);
+	std::unique_ptr<Tests> ne2 = Testsfactory::makeunique<Tests>(p);
 	return -1;
 }
 

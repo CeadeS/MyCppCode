@@ -9,12 +9,22 @@
 #define TESTS_HPP_
 #include <memory>
 #include <functional>
+struct classparam{
+	int a,b;
+	std::string s;
+	classparam(int a,int b,std::string s):a(a),b(b),s(s){};
+	classparam():a(5),b(5),s("lol")
+	{ };
+};
+
 
 class Tests : public std::enable_shared_from_this<Tests>
 {
 	int a,b;
+	std::string s;
 	std::function<int()> magicNumber;
-	char* ca;// = new char[5];
+	char* ca;
+
 	int doMagic(int* g){
 		return *g+magicNumber();
 	}
@@ -41,20 +51,42 @@ class Tests : public std::enable_shared_from_this<Tests>
 		 ca[i] = c;
 		 return true;
 	 }
+	 Tests(const classparam& p){
+		 printf("Test const& Param\n");
+	 }
+	 Tests(classparam&& p){
+		 printf("Test const&& Param\n");
+	 }
 	 Tests(int a,int b)
 	 : a(a)
 	 , b(b)
 	 , magicNumber([a,b]()->int{return a*b;})
 	 , ca(new char[b])
-	{ }
+	{
+		 printf("Normaler Konstruktor \n")
+	}
 
 	 ~Tests(){
 		 delete[] ca;
 		 ca =nullptr;
+		 printf("Destruktor");
 	 }
 
 };
 
+class Testsfactory{
+	public:
+	static std::unique_ptr<Tests> makeunique_Tests(classparam param)
+	{
+		return std::unique_ptr<Tests>(new Tests(param));
+	}
+	template<typename Product, typename... P>
+			static std::unique_ptr<Product> makeunique(P... param){
+			return std::unique_ptr< Product >(new Product( param...) );
+		}
+
+	Testsfactory() = delete;
+};
 
 
 
